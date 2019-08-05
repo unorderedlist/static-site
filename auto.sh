@@ -3,10 +3,10 @@ if [[ -z "$1" ]]; then
   exit
 fi
 
-# git checkout source
-# git add .
-# git commit -am "$1"
-# git push origin source
+git checkout source
+git add .
+git commit -am "$1"
+git push origin source
 echo "Source Found"
 bundle exec jekyll build
 cd _site
