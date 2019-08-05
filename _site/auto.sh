@@ -8,8 +8,7 @@ fi
 # git commit -am "$1"
 # git push origin source
 echo "Source Found"
-jekyll build && \
-touch _site/.nojekyll && \
+bundle exec jekyll build
 cd _site
 git add .
 git commit -am "$1"
