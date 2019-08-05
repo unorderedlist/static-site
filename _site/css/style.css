@@ -1,0 +1,67 @@
+@import "somestyle.css";
+@import "otherstyle.css";
+@import "anotherstyle.css";
+@font-face {
+    font-family: "nerd";
+    src: url("nerd.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url("roboto.ttf") format("truetype");
+}
+
+ins,
+del {
+    text-decoration: none;
+}
+
+kbd {
+    font-family: inherit;
+}
+
+s {
+    display: none;
+}
+
+.nerd {
+    font-family: "nerd" !important;
+    font-style: normal !important;
+    text-decoration: none;
+}
+
+.sans {
+    font-family: "roboto" !important;
+    font-style: normal !important;
+    text-decoration: none;
+}
+
+body {
+    font-family: "nerd" !important;
+}
+
+ins,
+del {
+    text-decoration: none;
+}
+
+kbd {
+    font-family: inherit;
+}
+
+s {
+    display: none;
+}
+
+.rrr,
+.lll {
+    display: inline-block !important;
+}
+
+#log {
+    visibility: hidden;
+}
+
+.float{
+    z-index: 1000 !important;
+}

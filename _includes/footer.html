@@ -1,0 +1,41 @@
+<footer>
+    <div class="card bg-white border-white mb3">
+        <div class="container-fluid d-sm-none d-md-block">
+            <div class="container d-md-block d-lg-block">
+                <div class="row">
+                    <div class="col text-muted">
+                        <small>
+                            <span class="nerd">&#xfae5; </span>
+                            2019 UnorderedList
+                        </small>
+                    </div>
+                    <div class="col-6 text-right">
+                        <small>
+                            <a href="https://github.com/unorderedlist" target="_blank"
+                                class="btn btn-white text-dark nerd mx-0 px-1">&#xf408;</a>
+                            <a href="https://twitter.com/anunorderedlist" target="_blank"
+                                class="btn btn-white text-dark nerd mx-0 px-1">&#xf099;</a>
+                            <a href="https://keybase.io/unorderedlist" target="_blank"
+                                class="btn btn-white text-dark nerd mx-0 px-1">&#xf084;</a>
+                            <a href="https://reddit.com/user/anunorderedlist" target="_blank"
+                                class="btn btn-white text-dark nerd mx-0 px-1">&#xf281;</a>
+                            <a href="mailto:anUnorderedList@gmail.com" class="btn btn-white text-dark nerd">&#xf6ed;</a>
+                        </small>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    {% for item in site.data.routes.foot %}
+                    <a href="{{ item.url }}" class="btn btn-white text-dark" role="button">{{ item.title }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="{{ '/js/bootstrap.js' | relative_url }}"></script>
+</body>
+
+</html>

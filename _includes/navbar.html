@@ -1,0 +1,55 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light pb-md-4 pb-sm-4">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/">[U, L]</a>
+
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                {% assign thisurl = page.url | remove: "/"%}
+                {% for item in site.data.routes.docs %}
+                {% if thisurl == item.url %}
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ item.url }}"><span class="sr-only">(current)</span>{{ item.title }}</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ item.url }}">{{ item.title }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            <form class="form-inline my-2 my-lg-0" autocomplete="off">
+                <!-- <a href="{{ '/search' | relative_url }}" class="nav-link">Search</a> -->
+                <div id="search-container" class="dropdown">
+                    <input class="form-control mr-sm-2 dropdown-toggle w-100" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false" type="text" id="search-input" aria-label="Search"
+                        placeholder="Search">
+                    <div class="dropdown-menu w-100" id="results" aria-labelledby="search-input">
+                        <div class="dropdown-item" id="results-container"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- id="results-container" -->
+        <script src="{{ '/js/search-script.js' | relative_url }}" type="text/javascript"></script>
+
+        <!-- Configuration -->
+        <script>
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-container'),
+                json: '/search.json'
+            })
+            $('#search-input').keyup(function () {
+                if ($(this).val().length == 0) {
+                    $('#results').hide();
+                } else {
+                    $('#results').show();
+                }
+            }).keyup(); 
+        </script>
+    </nav>
+</div>

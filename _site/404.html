@@ -1,0 +1,161 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Error · Dhruv Suthar</title>
+    <meta name="apple-mobile-web-app-title"
+        content="Error - Dhruv Suthar">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+</head>
+<noscript>
+    <div class="container">
+        <div class="h5 position-relative overflow-hidden p-3 p-md-5 m-md-3">
+            <div class="col-md-5 p-lg-5 mx-auto my-5">
+                <h1 class="nerd h1 font-weight-normal text-left">JS Off?</h1>
+                <p class="lead text-right pl-2">
+                    {<i>
+                        turn it ON <br>
+                        and wait.
+                    </i>}
+                </p>
+            </div>
+        </div>
+    </div>
+</noscript>
+
+<body id="style-3" class="bootstrap-overrides"> <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light pb-md-4 pb-sm-4">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/">[U, L]</a>
+
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="about">About</a>
+                </li>
+                
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="blog">Blog</a>
+                </li>
+                
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="contact">Contact</a>
+                </li>
+                
+                
+            </ul>
+            <form class="form-inline my-2 my-lg-0" autocomplete="off">
+                <!-- <a href="/search" class="nav-link">Search</a> -->
+                <div id="search-container" class="dropdown">
+                    <input class="form-control mr-sm-2 dropdown-toggle w-100" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false" type="text" id="search-input" aria-label="Search"
+                        placeholder="Search">
+                    <div class="dropdown-menu w-100" id="results" aria-labelledby="search-input">
+                        <div class="dropdown-item" id="results-container"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- id="results-container" -->
+        <script src="/js/search-script.js" type="text/javascript"></script>
+
+        <!-- Configuration -->
+        <script>
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-container'),
+                json: '/search.json'
+            })
+            $('#search-input').keyup(function () {
+                if ($(this).val().length == 0) {
+                    $('#results').hide();
+                } else {
+                    $('#results').show();
+                }
+            }).keyup(); 
+        </script>
+    </nav>
+</div>
+<div class="container">
+    <div class="h5 position-relative overflow-hidden p-3 p-md-5 m-md-3">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="nerd h1 font-weight-normal text-left">Seem Lost ?</h1>
+            <p class="lead text-right pl-2">
+                <i>
+                    Let me take you
+                    <a class="btn btn-white text-dark" href="">
+                        home
+                    </a>.
+                </i>
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+    window.setTimeout(function () {
+        window.location.href = "http://localhost:4000";
+    }, 5000);
+</script>
+<footer>
+    <div class="card bg-white border-white mb3">
+        <div class="container-fluid d-sm-none d-md-block">
+            <div class="container d-md-block d-lg-block">
+                <div class="row">
+                    <div class="col text-muted">
+                        <small>
+                            <span class="nerd">&#xfae5; </span>
+                            2019 UnorderedList
+                        </small>
+                    </div>
+                    <div class="col-6 text-right">
+                        <small>
+                            <a href="https://github.com/unorderedlist" target="_blank"
+                                class="btn btn-white text-dark nerd mx-0 px-1">&#xf408;</a>
+                            <a href="https://twitter.com/anunorderedlist" target="_blank"
+                                class="btn btn-white text-dark nerd mx-0 px-1">&#xf099;</a>
+                            <a href="https://keybase.io/unorderedlist" target="_blank"
+                                class="btn btn-white text-dark nerd mx-0 px-1">&#xf084;</a>
+                            <a href="https://reddit.com/user/anunorderedlist" target="_blank"
+                                class="btn btn-white text-dark nerd mx-0 px-1">&#xf281;</a>
+                            <a href="mailto:anUnorderedList@gmail.com" class="btn btn-white text-dark nerd">&#xf6ed;</a>
+                        </small>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    
+                    <a href="colophon" class="btn btn-white text-dark" role="button">Colophon</a>
+                    
+                    <a href="https://dhruvsuthar.ml/" class="btn btn-white text-dark" role="button">DhruvSuthar</a>
+                    
+                    <a href="privacy" class="btn btn-white text-dark" role="button">Privacy</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="/js/bootstrap.js"></script>
+</body>
+
+</html>

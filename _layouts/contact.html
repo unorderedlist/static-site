@@ -1,0 +1,46 @@
+{% include header.html %} {% include navbar.html %}
+<div class="container">
+    <div class="h2">
+        {{ page.title }}
+    </div>
+    <div class="text-secondary">
+        You can always email me on <a class="text-dark nerd" href="mailto:hello@dhruvsuthar.ml">hello@dhruvsuthar.ml</a><br>
+        Or, fill this form.
+    </div>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3">
+        <form name="Contact" data-netlify-recaptcha="true" data-netlify="true" netlify>
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" placeholder="Email" name="Email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="message" class="col-sm-2 col-form-label">Message</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control noresize" id="message" rows="3" placeholder="Message"
+                        name="Message"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="recaptcha" class="col-sm-2 col-form-label">Recaptcha</label>
+                <div class="col-sm-10">
+                    <div id="recaptcha" data-netlify-recaptcha="true"></div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="submit" class="col-sm-2 col-form-label">Submit</label>
+                <div class="col-sm-10">
+                    <button class="btn btn-light" id="submit" type="submit">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% include footer.html %}

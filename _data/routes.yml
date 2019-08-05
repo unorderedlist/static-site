@@ -1,0 +1,15 @@
+docs:
+- title: About
+  url: about
+- title: Blog
+  url: blog
+- title: Contact
+  url: contact
+
+foot:
+- title: Colophon
+  url: colophon
+- title: DhruvSuthar
+  url: "https://dhruvsuthar.ml/"
+- title: Privacy
+  url: privacy

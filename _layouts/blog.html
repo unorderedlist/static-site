@@ -1,0 +1,38 @@
+{% include header.html %} {% include navbar.html %}
+<div class="container">
+    <div class="h2">
+        {{ page.title }}
+    </div>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3">
+        <table class="table table-borderless">
+            {% for post in paginator.posts %}
+            <tr>
+                <td><a class="btn btn-white text-dark" href="{{ post.url }}">{{ post.title }}</a></td>
+                <td class="text-right">{{ post.date | date: "%b %d,%Y"}}</td>
+            </tr>
+            {% endfor %}
+            {% if paginator.total_pages > 1 %}
+            <tr>
+                <td>
+                    {% if paginator.previous_page %}
+                    <a class="btn btn-white text-dark" href="{{ paginator.previous_page_path | prepend:
+                                site.baseurl
+                                |
+                                replace: '//', '/' }}">Newer
+                        Posts</a>
+                    {% endif %}
+                </td>
+                <td></td>
+                <td class="text-right">
+                    {% if paginator.next_page %}
+                    <a class="btn btn-white text-dark" href="{{ paginator.next_page_path | prepend:
+                                site.baseurl |
+                                replace: '//', '/' }}">Older Posts</a>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endif %}
+        </table>
+    </div>
+</div>
+{% include footer.html %}

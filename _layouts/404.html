@@ -1,0 +1,22 @@
+{% include header.html %} {% include navbar.html %}
+<div class="container">
+    <div class="h5 position-relative overflow-hidden p-3 p-md-5 m-md-3">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="nerd h1 font-weight-normal text-left">Seem Lost ?</h1>
+            <p class="lead text-right pl-2">
+                <i>
+                    Let me take you
+                    <a class="btn btn-white text-dark" href="">
+                        home
+                    </a>.
+                </i>
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+    window.setTimeout(function () {
+        window.location.href = "{{ site.url }}";
+    }, 5000);
+</script>
+{% include footer.html %}
